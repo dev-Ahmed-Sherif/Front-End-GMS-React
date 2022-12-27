@@ -1,0 +1,18 @@
+.buttonApi {
+    color: var(--prime);
+    padding: 10px;
+    background: transparent;
+    border: 1.5px solid var(--prime);
+    border-radius: 5px;
+    text-transform: capitalize;
+    transition: 0.2s ease;
+    text-align: center;
+    align-items: center;
+    margin-left: -10%;
+}
+
+.buttonApi:hover {
+    color: #fff;
+    background: var(--prime);
+    border: none;
+}

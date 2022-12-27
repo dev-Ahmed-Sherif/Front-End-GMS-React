@@ -1,0 +1,224 @@
+/* #bigContainer {
+     display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin-left: 5%; 
+} */
+
+/* filter override bootstrab style  */
+#filterApi {
+  width: 100%;
+  justify-content: space-between;
+  border-radius: 5px;
+  min-height: 100vh;
+}
+
+.accordion-item {
+  background-color: #222;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.accordion-button {
+  background-color: var(--onyx-darker);
+  color: var(--prime);
+  font-size: 1.3rem;
+}
+
+.accordion-button::after {
+  background-color: var(--onyx-darker);
+  border-radius: 15%;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: var(--white);
+  color: var(--prime);
+}
+
+.accordion-button.collapsed::after {
+  background-color: var(--white);
+  border-radius: 15%;
+}
+
+.accordion-button:focus {
+  box-shadow: 2px 2px 20px var(--prime);
+  z-index: 0;
+}
+
+.sortExerciseChoices {
+  display: flex;
+  margin-bottom: 5%;
+}
+
+.sortExerciseChoices input {
+  width: 25px;
+  accent-color: var(--prime);
+  box-shadow: inset 0 0 10px var(--prime);
+  box-shadow: 0 0 10px var(--prime);
+}
+
+.sortExerciseChoices label {
+  margin-left: 5%;
+  font-size: 1.1rem;
+}
+
+
+/* -------------------------- header in all exercise page styling ------------------------------*/
+
+.view {
+  width: 100%;
+  min-height: 80vh;
+  position: relative;
+}
+
+.home {
+  display: flex;
+  margin-top: 5%;
+  min-height: 80vh;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(100% 0, 100% 81%, 50% 100%, 0 87%, 0 0);
+}
+
+.backgroundAllEx {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url('../../pages/images/attractive-handsome-bearded-man-holding-kettlebell-doing-squats-fitness-group-with-two-girls-modern-gym_232070-9107.webp');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(40%);
+}
+
+.backgroundAssignEx {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url('../../pages/images/attractive-handsome-bearded-man-holding-kettlebell-doing-squats-fitness-group-with-two-girls-modern-gym_232070-9107.webp');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(40%);
+}
+
+.backgroundAllTrainee {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url('../../pages/images/headerEx1.jpeg');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(40%);
+}
+
+.highlights {
+  padding: 1% 5% 0 5%;
+  display: inline-flex;
+  background: rgba(26, 26, 26, 1);
+  border-radius: 10px;
+}
+
+.highlights .static-txt {
+  font-size: 50px;
+  color: var(--white);
+  font-weight: 600;
+}
+
+.highlights .dynamic-txt {
+  margin-left: 15px;
+  line-height: 90px;
+  /* background: red; */
+  height: 90px;
+  overflow: hidden;
+}
+
+.highlights .dynamic-txt li {
+  color: var(--prime);
+  list-style: none;
+  font-size: 50px;
+  font-weight: 600;
+  position: relative;
+  margin-top: -8px;
+  /* top: 0%; */
+  /* animation: slide 5s steps(4) infinite; */
+}
+
+/* @keyframes slide{
+  100%{
+      top: -100px;
+  }
+} */
+.highlights .dynamic-txt li span {
+  position: relative;
+}
+
+.highlights .dynamic-txt li span::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  background: rgba(26, 26, 26, 1);
+  border-left: 2px solid var(--prime);
+  animation: typing 1.5s steps(10) infinite;
+}
+
+@keyframes typing {
+  100% {
+    left: 100%;
+    margin: 0 -35px 0 35px;
+  }
+}
+
+
+/* --------------------------------------- animated square --------------------------------*/
+.exAnimateSquare {
+  position: absolute;
+  /* backdrop-filter: blur(5px); */
+  /* box-shadow: 0px 10px 25px var(--prime); */
+  /* background: var(--basic-c-white); */
+  /* background: transparent; */
+  border-radius: 10px;
+  animation: animatesquare 5s linear infinite;
+  display: flex;
+  /* animation-delay: 0.25s; */
+}
+
+@keyframes animatesquare {
+
+  0%,
+  100% {
+    transform: translateY(-20px);
+  }
+
+  50% {
+    transform: translateY(20px);
+  }
+}
+
+.ExBoxSquareAnimated .exAnimateSquare:nth-child(1) {
+  flex-direction: column;
+  width: 100px;
+  /* height: 130px; */
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: -5%;
+  margin-left: 46%;
+  z-index: 2;
+}
+
+.exAnimateSquare i {
+  color: var(--white);
+  /* background: #000; */
+  border-radius: 50px;
+  /* padding: 3% 3% 0 3%; */
+  /* height: 30px;
+  width: 30px; */
+  font-size: 80px;
+  filter: drop-shadow(0.35rem 0.35rem 0.2rem var(--prime));
+  text-align: center;
+}
+
+.exAnimateSquare p {
+  margin-left: 1%;
+  font-weight: 600;
+  text-align: center;
+}

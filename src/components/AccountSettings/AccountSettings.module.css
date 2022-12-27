@@ -1,0 +1,125 @@
+/* * {
+    box-sizing: border-box;
+} */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 32px;
+    background: url("./header.jpg");
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+@media (min-width: 1024px) {
+    .container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        height: 100vh;
+        max-width: 100%;
+        margin: 0 auto;
+        padding-top: 0;
+    }
+}
+
+.avatar {
+    margin-bottom: 16px;
+    width: 200px;
+    border-radius: 70%;
+}
+
+.image {
+    width: 20px;
+}
+
+@media (min-width: 1024px) {
+    .avatar {
+        width: 512px;
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    width: 320px;
+}
+
+.h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 1px;
+    margin: 0;
+    margin-bottom: 16px;
+}
+
+.label {
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.input,
+.textarea {
+    size: 90px;
+    margin-bottom: 16px;
+    padding: 12px;
+    font-size: 30px;
+    outline: 0;
+}
+
+.input:active,
+.input:focus,
+.textarea:active,
+.textarea:focus {
+    border: 2px solid #327cff;
+    background: #327cff;
+    color: #fff;
+}
+
+.button {
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 16px 0;
+    border-radius: 8px 24px 8px 24px;
+    border: 2px solid #327cff;
+    background-color: #327cff;
+    color: #fff;
+    outline: 0;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.button:hover,
+.button:active,
+.button:focus {
+    background-color: #02348c;
+    border-color: #02348c;
+}
+
+
+.imagePicker{
+  position: absolute;
+  font-size: 20px;
+  color: var(--white);
+  border-radius: 50%;
+  border: 2px solid var(--white);
+  padding: 3px 10px 3px 10px;
+  background: var(--prime);
+  margin-left: 10%;
+  top: 55%;
+}
+.image-upload > input
+{
+    display: none;
+}
+
+.image-upload img
+{
+    width: 80px;
+    cursor: pointer;
+}

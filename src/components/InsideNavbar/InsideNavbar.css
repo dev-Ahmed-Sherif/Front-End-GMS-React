@@ -1,0 +1,11 @@
+.search{
+    border:1px solid var(--prime);
+     border-radius:0.5rem;
+     padding:0.5rem;
+     background:transparent;
+     color: var(--prime);
+}
+.search:hover{
+    color: #fff;
+  background: var(--prime);
+}

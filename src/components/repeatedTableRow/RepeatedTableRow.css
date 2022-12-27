@@ -1,0 +1,272 @@
+select {
+  color: #fff;
+  background: var(--prime);
+  padding: 10px;
+  border: 1.5px solid var(--prime);
+  border-radius: 5px;
+  text-transform: capitalize;
+  transition: 0.2s ease;
+  text-align: center;
+  align-items: center;
+  margin-left: -10%;
+}
+
+select option {
+  color: #fff;
+  background: #000;
+  text-align: center;
+}
+
+/* style in hover not responding */
+option:hover {
+  color: var(--prime);
+  background: #000;
+  text-align: center;
+}
+
+/* --------------------------- trainees table in trainer pages styling ------------------------*/
+table {
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  border-collapse: collapse;
+  width: 800px;
+  height: 200px;
+  border: 1px solid var(--prime);
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+  background: #000;
+  /* background-image: url(../../../public/trineeTableBackground.png); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+tr,
+#traineeTableRow {
+  transition: all .2s ease-in;
+  cursor: pointer;
+  text-align: center;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--prime);
+  text-align: center;
+}
+
+#traineeTableheader {
+  background-color: var(--prime);
+  color: var(--white);
+}
+
+tr:hover {
+  background-color: var(--onyx-darker);
+  transform: scale(1.02);
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (max-width: 768px) {
+  table {
+      width: 90%;
+  }
+}
+
+.buttonApi {
+  margin-left: 1%;
+}
+
+/* --------------------------------------- animated square --------------------------------*/
+.animateSquare {
+  position: absolute;
+  backdrop-filter: blur(5px);
+  box-shadow: 0px 10px 25px var(--prime);
+  background: var(--basic-c-white);
+  border-radius: 10px;
+  animation: animate 5s linear infinite;
+  display: flex;
+  /* animation-delay: 0.25s; */
+}
+
+@keyframes animate {
+
+  0%,
+  100% {
+      transform: translateY(-20px);
+  }
+
+  50% {
+      transform: translateY(20px);
+  }
+}
+
+.boxSquareAnimated {
+  margin-bottom: 100px;
+}
+
+.boxSquareAnimated .animateSquare:nth-child(1) {
+  width: 80px;
+  height: 80px;
+  /* background-image: url(../../../public/traineeAnimatedPhoto.jpg);
+  background-size: cover;
+  background-repeat: no-repeat; */
+  margin-top: -18%;
+  margin-left: 40%;
+  z-index: 2;
+}
+
+.boxSquareAnimated .animateSquare:nth-child(2) {
+  /* width: 200px;
+  height: 130px; */
+  margin-top: -25%;
+  margin-left: 35%;
+  padding: 1% 1% 0 1%;
+  z-index: 2;
+}
+
+.boxSquareAnimated .animateSquare:nth-child(3) {
+  /* width: 200px;
+  height: 130px; */
+  margin-top: 22%;
+  margin-left: 60%;
+  padding: 1% 1% 0 1%;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.animateSquare i {
+  color: red;
+  background: #000;
+  border-radius: 50px;
+  padding: 3% 3% 0 3%;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+}
+
+.animateSquare p {
+  margin-left: 1%;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* /------------------------------------------- trainee cards ------------------------------------/ */
+
+#containerTraineeCardApi {
+  width: 90%;
+  /* margin: 50px auto; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 5%;
+  margin-left: 5%;
+  margin-bottom: 10%;
+  margin-top: 10%;
+}
+.traineeExCard{
+  position: relative;
+  justify-content: center;
+  height: 350px;
+  width: 350px;
+  background: #333;
+  transition: 0.5s;
+}
+/* .traineeExCard:hover{
+ height: 400px;
+} */
+.traineeExCard .traineeExCardLines{
+  position: absolute;
+  inset: 0;
+  background: #000;
+  overflow: hidden;
+}
+.traineeExCard .traineeExCardLines::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 120px;
+  background: linear-gradient(transparent, var(--prime), var(--prime), var(--prime), transparent);
+  animation: animateTraineeCardLine 4s linear infinite;
+}
+
+@keyframes animateTraineeCardLine{
+  0%{
+      transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100%{
+      transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.traineeExCard .traineeExCardLines::after{
+  content: '';
+  position: absolute;
+  inset: 3px;
+  background: var(--onyx-darker);
+  /* background: linear-gradient(transparent, var(--prime), var(--prime), var(--prime), transparent);
+  animation: animate 4s linear infinite; */
+}
+.traineeExCard .traineeCardImgBox{
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 150px;
+  background: #000;
+  overflow: hidden;
+}
+.traineeExCard .traineeCardImgBox::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 150px;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(transparent, var(--white), var(--white), var(--white), transparent);
+  animation: animateTraineeCardLine 4s linear infinite;
+}
+@keyframes animateTraineeCardLine2{
+  0%{
+      transform: translate(-50%, -50%) rotate(360deg);
+  }
+  100%{
+      transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+
+.traineeExCard .traineeCardImgBox::after{
+  content: '';
+  position: absolute;
+  inset: 3px;
+  background: var(--onyx-darker);
+}
+.traineeExCard .traineeCardImgBox img{
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+  width: calc(100% - 20%);
+  height: calc(100% - 20%);
+  /* filter: grayscale(1); */
+  /* inset: 3px;*/
+  background-image: url(../../pages/images/default-placeholder-fitness-trainer-t-shirt_146706-352mm.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.traineeExCard .trineeCardContent{
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  top: 30%;
+  text-align: center;
+}
